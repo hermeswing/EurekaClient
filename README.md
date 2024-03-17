@@ -1,5 +1,9 @@
 # 유레카 클라이언트 ( Eureka Client )
 
+## Spring Cloud 아키텍처 관계도
+![크라우드 아키텍처](./md_img/cloud-3-dark.svg)
+출처 : https://spring.io/cloud
+
 ## 개발환경
 - JDK : Zulu JDK 17.0.10
 - SpringBoot : 3.2.3
@@ -8,14 +12,8 @@
 - SpringBoot Eureka Client : 현재 최신버전 4.1.0
 - build tools : Gradle
 
-## 참고.
-> https://github.com/eugenp/tutorials/tree/master/spring-cloud-modules
-> https://velog.io/@rockstar/Spring-Cloud-Eureka-Server-%EC%84%A4%EC%A0%95-%EB%B0%8F-MSA-%ED%86%B5%EC%8B%A0-%EB%B0%A9%EB%B2%95
-> https://velog.io/@ililil9482/MSA-%EA%B5%AC%EC%84%B1-Discovery-Gateway-Config
-> https://github.com/Jimoou/springboot-microservices?tab=readme-ov-file
-
 ## Spring Cloud 버전과 Spring Boot 버전 및 JDK 의 버전 호환성
-- 참조
+- 출처
 ```text
 https://spring.io/projects/spring-cloud#overview  
 https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Versions
@@ -182,3 +180,10 @@ Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.cl
   - Runtime or Compile JDK 버전이 상이 해서라는 대답이 꽤 많았음.
   - 나의 경우는
     - ***implementation 'org.springframework.boot:spring-boot-starter-web'를 추가하니 해결됨.***
+
+
+## 참고.
+> https://github.com/eugenp/tutorials/tree/master/spring-cloud-modules  
+> https://velog.io/@rockstar/Spring-Cloud-Eureka-Server-%EC%84%A4%EC%A0%95-%EB%B0%8F-MSA-%ED%86%B5%EC%8B%A0-%EB%B0%A9%EB%B2%95  
+> https://velog.io/@ililil9482/MSA-%EA%B5%AC%EC%84%B1-Discovery-Gateway-Config  
+> https://github.com/Jimoou/springboot-microservices?tab=readme-ov-file  

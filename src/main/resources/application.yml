@@ -10,6 +10,14 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/         #Eureka Server 경로
+      #defaultZone: http://localhost:8761/eureka/         # Eureka Server 경로
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}       # http://localhost:8761/eureka/ 와 같은 설정임.
+
   instance:
-    hostname: localhost
+    # hostname: localhost # 등록을 안하면, ${domain_name} not found exception이 발생한다고 한다.
+    #
+    #
+    # spring.application.instance_id :
+    # vcap.application.instance_id : Spring Boot 애플리케이션에 자동으로 채워짐.
+    #instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
